@@ -24,10 +24,12 @@ Now open Postman and send request to any of the routes with the following body a
 
 `POST` -> `http://0.0.0.0:5400/api/v1/user`
 
-`{
+```json
+{
      "first_name": "John",
      "last_name": "Doe",
      "email": "john.doe@gmail.com"
- }`
+ }
+```
 
 That's it

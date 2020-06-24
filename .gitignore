@@ -1,4 +1,4 @@
 *.zip
 *.txt
 *.sqlite3
-rest-api
+./rest-api

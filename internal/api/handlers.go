@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-// handles creating thing upon POST request with json data
+// handles creating user upon POST request with json data
 func (a *API) createUser(c echo.Context) error {
 	var in User
 	
@@ -28,7 +28,7 @@ func (a *API) createUser(c echo.Context) error {
 }
 
 
-// get handler for getting a thing by id upon GET request
+// get handler for getting a user by id upon GET request
 func (a *API) getUser(c echo.Context) error {
 	var out User
 	
@@ -41,7 +41,7 @@ func (a *API) getUser(c echo.Context) error {
 	return c.JSON(200, out)
 }
 
-// get all handler for getting all things upon GET request
+// get all handler for getting all users upon GET request
 func (a *API) getAllUsers(c echo.Context) error {
 	var out []User
 	
@@ -51,7 +51,7 @@ func (a *API) getAllUsers(c echo.Context) error {
 }
 
 
-// update handler for updating a thing by id upon PUT request
+// update handler for updating a user by id upon PUT request
 func (a *API) updateUser(c echo.Context) error {
 	var in User
 	// decode request body json to our object
@@ -72,7 +72,7 @@ func (a *API) updateUser(c echo.Context) error {
 	return c.JSON(200, out)
 }
 
-// delete handler for deleting a thing by id upon DELETE request
+// delete handler for deleting a user by id upon DELETE request
 func (a *API) deleteUser(c echo.Context) error {
 	a.db.Where("id = ?", c.Param("id")).Delete(&User{})
 	

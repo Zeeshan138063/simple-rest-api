@@ -12,7 +12,7 @@ func (a *API) initRoutes() {
 	
 	// declare routes
 	routeGroup.GET("/user", nil)
-	routeGroup.POST("/user", nil)
+	routeGroup.POST("/user", a.createUser)
 	routeGroup.GET("/user/:id", nil)
 	routeGroup.PUT("/user/:id", nil)
 	routeGroup.DELETE("/user/:id", nil)

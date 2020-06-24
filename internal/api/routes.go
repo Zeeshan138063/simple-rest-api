@@ -14,7 +14,7 @@ func (a *API) initRoutes() {
 	routeGroup.GET("/user", a.getAllUsers)
 	routeGroup.POST("/user", a.createUser)
 	routeGroup.GET("/user/:id", a.getUser)
-	routeGroup.PUT("/user/:id", nil)
-	routeGroup.DELETE("/user/:id", nil)
+	routeGroup.PUT("/user/:id", a.updateUser)
+	routeGroup.DELETE("/user/:id", a.deleteUser)
 }
 

@@ -20,6 +20,7 @@ func New(db *gorm.DB) (*API, error) {
 	
 	// create new table upon start (will not create if one already exists)
 	newAPI.db.AutoMigrate(&User{})
+	newAPI.initRoutes()
 	
 	return &newAPI, nil
 }

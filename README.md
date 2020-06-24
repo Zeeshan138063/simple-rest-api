@@ -4,7 +4,7 @@
 
 Make sure you have Go latest version installed
 
-You should see a lots of logs, without errors. Finally if something goes right, you should see a log like this:
+If something goes right, you should see a log like this:
 
 `2020/05/11 15:29:02 running api server at http://0.0.0.0:5400`
 

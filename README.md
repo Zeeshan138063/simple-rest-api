@@ -2,9 +2,11 @@
 
 ### Instructions
 
-Make sure you have Go latest version installed
+Make sure you have Go latest version installed and `make` installed
 
-If something goes right, you should see a log like this:
+Run `make run`
+
+If everything goes right, you should see a log like this:
 
 `2020/05/11 15:29:02 running api server at http://0.0.0.0:5400`
 

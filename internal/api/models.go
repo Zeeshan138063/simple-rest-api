@@ -2,7 +2,7 @@ package api
 
 import "github.com/jinzhu/gorm"
 
-// Thing Model
+// User Model
 type User struct {
 	gorm.Model
 	FirstName string `json:"first_name,omitempty" validate:"required"`

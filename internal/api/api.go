@@ -14,17 +14,17 @@ type API struct {
 	validate *validator.Validate
 }
 
-// API constructor function
+// New is the API constructor function
 func New(db *gorm.DB) (*API, error) {
-	newApi := API{srv: new(http.Server), db: db, validate: validator.New()}
+	newAPI := API{srv: new(http.Server), db: db, validate: validator.New()}
 	
 	// create new table upon start (will not create if one already exists)
-	newApi.db.AutoMigrate(&User{})
+	newAPI.db.AutoMigrate(&User{})
 	
-	return &newApi, nil
+	return &newAPI, nil
 }
 
-// function for running API
+// Run is the function for running the API server daemon
 func (a *API) Run(addr string) error {
 	// saving the address to server
 	a.srv.Addr = addr

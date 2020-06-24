@@ -11,9 +11,9 @@ func (a *API) initRoutes() {
 	routeGroup := r.Group("/api/v1")
 	
 	// declare routes
-	routeGroup.GET("/user", nil)
+	routeGroup.GET("/user", a.getAllUsers)
 	routeGroup.POST("/user", a.createUser)
-	routeGroup.GET("/user/:id", nil)
+	routeGroup.GET("/user/:id", a.getUser)
 	routeGroup.PUT("/user/:id", nil)
 	routeGroup.DELETE("/user/:id", nil)
 }

@@ -25,3 +25,26 @@ func (a *API) createUser(c echo.Context) error {
 	// return json response
 	return c.JSON(200, in)
 }
+
+
+// get handler for getting a thing by id upon GET request
+func (a *API) getUser(c echo.Context) error {
+	var out User
+	
+	a.db.Where("id = ?", c.Param("id")).Find(&out)
+	
+	if out.ID == 0 {
+		return c.String(http.StatusNotFound, "user not found")
+	}
+	
+	return c.JSON(200, out)
+}
+
+// get all handler for getting all things upon GET request
+func (a *API) getAllUsers(c echo.Context) error {
+	var out []User
+	
+	a.db.Find(&out)
+	
+	return c.JSON(200, out)
+}

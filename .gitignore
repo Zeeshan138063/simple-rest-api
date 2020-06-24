@@ -2,3 +2,4 @@
 *.txt
 *.sqlite3
 ./rest-api
+.idea
